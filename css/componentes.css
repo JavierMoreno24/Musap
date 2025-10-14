@@ -4,7 +4,7 @@
 .nav {
   background-color: #ffffff;
   border-bottom: 1px solid #fffefe;
-  position: static; /* se mantiene arriba al hacer scroll */
+  position: sticky; /* se mantiene arriba al hacer scroll */
   top: 0;
   z-index: 100;
   display: flex;
@@ -50,12 +50,43 @@
  /* ==========================
    TEXTO CONTROLS
    ========================== */
+  /* botones de galeria */
 .text-btn {
-  grid-column: 2 / 7;
+  grid-column: 3 / 7;
   font-family: var(--font-main);
-  font-weight: 600; /* semibold */
-  font-size: var(--fs-btn);
+  font-weight: 400; /* semibold */
+  font-size: 1rem;
+  border-radius: 6px;
 }
+.text-btn {
+  background-color: #FFFCE6;/* cambio de color de borde del boton HERO */
+  color: #000000;/* cambio de color de borde texto boton HERO */
+ border: 2px solid #060606; /* color de borde del boton HERO */ 
+}
+.text-btn:hover {
+  background-color: #7D56C0;/* cambio de color de borde del boton HERO */
+  color: #fff;/* cambio de color de borde texto boton HERO */
+  border: transparent;
+}
+  /* boton de comunidad */
+.text-btnn {
+  grid-column: 3 / 7;
+  font-family: var(--font-main);
+  font-weight: 400; /* semibold */
+  font-size: 1rem;
+  border-radius: 6px;
+}
+.text-btnn {
+  background-color: #FFFCE6;/* cambio de color de borde del boton HERO */
+  color: #000000;/* cambio de color de borde texto boton HERO */
+ border: 2px solid #060606; /* color de borde del boton HERO */ 
+}
+.text-btnn:hover {
+  background-color: #280c59;/* cambio de color de borde del boton HERO */
+  color: #fff;/* cambio de color de borde texto boton HERO */
+  border: transparent;
+}
+
 .text-subtitle {
   grid-column: 2 / -2; /* comienza en la columna 2 y ocupa 3 columnas (ajústalo a gusto) */
   font-family: var(--font-main);
@@ -64,6 +95,7 @@
   text-align: left;
   /* separación entre secciones */
   margin: 40px 0;
+ 
 }
 .text-bañera {
   grid-column: 2 / 7;
@@ -136,7 +168,7 @@ body {
 
 /* --- HERO SECTION --- */
 .hero {
-  min-height: 90vh; /* altura visual grande */
+  min-height: 80vh; /* altura visual grande */
 }
 
 /* Texto a la izquierda */
@@ -184,15 +216,14 @@ body {
 
 .btn.secondary {
   background-color: transparent;
-  border: 2px solid #ff7f50;
-  color: #020202;
+  border: 2px solid #ff7f50; /* color de borde del boton HERO */
+  color: #000000;/* color de borde texto boton HERO */
 }
 
 .btn.secondary:hover {
-  background-color: #ff895a;
-  color: #fff;
+  background-color: #ff895a;/* cambio de color de borde del boton HERO */
+  color: #fff;/* cambio de color de borde texto boton HERO */
 }
-
 
 /* Imagen a la derecha */
 .hero-image {
@@ -202,7 +233,7 @@ body {
 }
 
 .hero-image img {
-  width: 130%;
+  width: 125.5%;
   height: auto;
   object-fit: cover;
 }
@@ -217,14 +248,11 @@ body {
 
 /* Logo dentro de la sección */
 .seccion-logo .logo img {
-  width: 150px;  /* ajusta el tamaño según necesites */
-  height: auto;
+  width: auto;  /* ajusta el tamaño según necesites */
+  height: 450px;
   transition: transform 0.3s ease;
 }
 
-.seccion-logo .logo img:hover {
-  transform: scale(1.2); /* efecto de aumento al pasar el cursor */
-}
 /* =========================
    RETOS
    ========================= */
@@ -239,22 +267,32 @@ body {
   align-items: center;
 }
 .retos {
- padding: 100px 0;
+  /* Ocupa todo el ancho y aumenta la altura */
+  grid-column: 1 / -1;
+  width: auto;
+  min-height: 100vh; /* ocupa casi toda la pantalla en alto */
+  
+  /* Espaciado interno para aire visual */
+  padding: 120px 40px; /* antes 100px 0 —> puedes ajustar este valor */
+  
   display: grid;
   grid-template-columns: repeat(14, 1fr);
-  gap: 20px;
+  gap: 30px;
   align-items: start;
+  justify-content: center;
 
   /* fondo color piel */
   background-color: #FFE3AF; /* tu color piel */
+
 }
 
 .retos-titulo {
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 44px;
   color: #000000;
   margin: 0 0 10px 0;
+  margin-top: 30px;
 }
 
 /* GRID DE LOS 3 RETOS */
@@ -324,4 +362,33 @@ body {
   margin: 0;
 }
 
+/* reto Botones */
+.reto-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.btnreto {
+  background-color: #c0a7a7;
+  color: #b91f1f;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+ 
+}
 
+
+.btnreto {
+  background-color: transparent;/* cambio de color de borde del boton HERO */
+  color: #000000;/* cambio de color de borde texto boton HERO */
+  border: 2px solid #060606; /* color de borde del boton HERO */
+}
+.btnreto:hover {
+  background-color: #6119f1;/* cambio de color de borde del boton HERO */
+  color: #fff;/* cambio de color de borde texto boton HERO */
+  border: transparent;
+}
