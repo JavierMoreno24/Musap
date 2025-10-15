@@ -18,6 +18,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+ 
 }
 /* Contenedor de los enlaces */
 .nav-links {
@@ -26,9 +27,11 @@
   align-items: center;
   gap: 40px;
   padding: 20px 0;
+ 
 }
 /* Estilos de los enlaces */
 .nav-links a {
+  vertical-align: text-bottom;
   text-decoration: none;
   color: #000000;
   font-family: 'Nunito Sans', sans-serif;
@@ -88,7 +91,6 @@
 }
 
 .text-subtitle {
-  grid-column: 2 / -2; /* comienza en la columna 2 y ocupa 3 columnas (ajústalo a gusto) */
   font-family: var(--font-main);
   font-weight: 440;
   font-size: var(--fs-subtitle);
@@ -249,7 +251,7 @@ body {
 /* Logo dentro de la sección */
 .seccion-logo .logo img {
   width: auto;  /* ajusta el tamaño según necesites */
-  height: 450px;
+  height: 250px;
   transition: transform 0.3s ease;
 }
 
@@ -287,6 +289,8 @@ body {
 }
 
 .retos-titulo {
+  display: grid;
+  grid-column: 1 / 4;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 500;
   font-size: 44px;
@@ -392,3 +396,4 @@ body {
   color: #fff;/* cambio de color de borde texto boton HERO */
   border: transparent;
 }
+
