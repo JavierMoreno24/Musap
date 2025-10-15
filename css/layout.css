@@ -1,0 +1,63 @@
+/* =========================
+   GRID VISUAL 14 COLUMNAS (30% OPACIDAD)
+   ========================= */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  column-gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Superpone una cuadrícula basada en 14 columnas y medianil de 20px */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1440px, 100%); /* igual que tu .container */
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+
+  /* Generar columnas con gradientes */
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(155, 43, 195, 0.4) 0,                              /* inicio columna */
+    rgba(155, 43, 195, 0.4) calc((100% - (13 * 20px)) / 14), /* fin columna */
+    transparent calc((100% - (13 * 20px)) / 14),
+    transparent calc(((100% - (13 * 20px)) / 14) + 20px)     /* gap de 20px */
+  );
+}
+
+
+/* =========================
+   SUBTÍTULOS
+   ========================= */
+.text-subtitle {
+  grid-column: 1 / -2; /* comienza en la columna 2 y ocupa 3 columnas */
+  font-family: var(--font-main);
+  font-weight: 440;
+  font-size: var(--fs-subtitle);
+}
+/* ==========================================
+   ALINEACIÓN UNIVERSAL CON LA COLUMNA 2
+   ========================================== */
+
+/* Clase reutilizable */
+.alinear-col2 {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: calc(((100% - (13 * 20px)) / 14) + 20px);
+}
+
+/* Aplicación automática a títulos y párrafos */
+h1, h2, h3, p, .text-subtitle, .text-bañera, .text-comunidad-texto {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: calc(((100% - (13 * 20px)) / 14) + 20px);
+}
