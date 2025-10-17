@@ -1,199 +1,147 @@
 /* =========================
-   NAVEGADOR BAR (componentes.css)
+   SUBTÍTULOS
+   ========================= */
+.text-subtitle {
+  grid-column: 2 / -1; /* empieza en columna 2 y llega hasta la última */
+  font-family: var(--font-main);
+  font-weight: 440;
+  font-size: var(--fs-subtitle);
+}
+
+/* ==========================================
+   ALINEACIÓN UNIVERSAL CON LA COLUMNA 2
+   ========================================== */
+
+/* Clase reutilizable si necesitás aplicarla a otros elementos */
+.alinear-col2 {
+  grid-column: 2 / -1; /* todos empiezan en columna 2 */
+}
+
+/* Aplicación automática a títulos y párrafos */
+h1, h2, h3, p, .text-subtitle, .text-bañera, .text-comunidad-texto {
+  grid-column: 2 / -1; /* empieza en columna 2 y se extiende hasta el final */
+  max-width: 1440px;
+  margin: 0 auto; /* centrado horizontal si queda espacio */
+}
+
+
+/* =========================
+   VARIABLES GLOBALES
+   ========================= */
+:root {
+  --color-primary: #ff7f50;
+  --color-secondary: #9b2bc3;
+  --color-background: #fafafa;
+  --color-piel: #FFE3AF;
+
+  --font-main: 'Nunito Sans', sans-serif;
+
+  --fs-title: 2.5rem;
+  --fs-subtitle: 1.8rem;
+  --fs-text: 1rem;
+
+  --btn-padding: 12px 24px;
+  --btn-radius: 8px;
+  --btn-transition: 0.5s ease;
+}
+
+/* =========================
+   NAVEGADOR
    ========================= */
 .nav {
   background-color: #ffffff;
   border-bottom: 1px solid #fffefe;
-  position: sticky; /* se mantiene arriba al hacer scroll */
+  position: sticky;
   top: 0;
   z-index: 100;
   display: flex;
-  justify-content: center; /* centra el contenido dentro de la barra */
+  justify-content: center;
   align-items: center;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   transition: background-color 0.3s ease;
 }
-/* Contenedor interno */
+
 .nav .container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
- 
 }
-/* Contenedor de los enlaces */
+
 .nav-links {
   display: flex;
-  justify-content: center; /* centra horizontalmente los enlaces */
+  justify-content: center;
   align-items: center;
   gap: 40px;
   padding: 20px 0;
- 
 }
-/* Estilos de los enlaces */
+
 .nav-links a {
-  vertical-align: text-bottom;
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 15px;
+  color: #000;
   text-decoration: none;
-  color: #000000;
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 550; /* semibold */
-  font-size: 15px;  /* tamaño del texto */
-  align-items: center;
-  text-decoration: none;
-  color: #000000;
-  transition: color 0.18s ease, transform 0.12s ease
+  transition: color 0.18s ease, transform 0.12s ease;
 }
-/* Hover con movimiento y color suave */
+
 .nav-links a:hover {
   transform: translateY(-2px);
-  color: #9b2bc3;
+  color: var(--color-secondary);
   text-shadow: 0 0 3px rgba(87, 78, 89, 0.2);
 }
 
-
- /* ==========================
-   TEXTO CONTROLS
-   ========================== */
-  /* botones de galeria */
-.text-btn {
-  grid-column: 3 / 7;
-  font-family: var(--font-main);
-  font-weight: 400; /* semibold */
-  font-size: 1rem;
-  border-radius: 6px;
-}
-.text-btn {
-  background-color: #FFFCE6;/* cambio de color de borde del boton HERO */
-  color: #000000;/* cambio de color de borde texto boton HERO */
- border: 2px solid #060606; /* color de borde del boton HERO */ 
-}
-.text-btn:hover {
-  background-color: #7D56C0;/* cambio de color de borde del boton HERO */
-  color: #fff;/* cambio de color de borde texto boton HERO */
-  border: transparent;
-}
-  /* boton de comunidad */
-.text-btnn {
-  grid-column: 3 / 7;
-  font-family: var(--font-main);
-  font-weight: 400; /* semibold */
-  font-size: 1rem;
-  border-radius: 6px;
-}
-.text-btnn {
-  background-color: #FFFCE6;/* cambio de color de borde del boton HERO */
-  color: #000000;/* cambio de color de borde texto boton HERO */
- border: 2px solid #060606; /* color de borde del boton HERO */ 
-}
-.text-btnn:hover {
-  background-color: #280c59;/* cambio de color de borde del boton HERO */
-  color: #fff;/* cambio de color de borde texto boton HERO */
-  border: transparent;
-}
-
-.text-subtitle {
-  font-family: var(--font-main);
-  font-weight: 440;
-  font-size: var(--fs-subtitle);
-  text-align: left;
-  /* separación entre secciones */
-  margin: 40px 0;
- 
-}
-.text-bañera {
-  grid-column: 2 / 7;
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 50px;
-  text-align: left;
-  color: #FF7F50;
-  line-height: 1.4;
-}
-
-.text-title {
-  font-family: var(--font-main);
-  font-weight: 700; /* bold */
-  font-size: var(--fs-title);
-  color: var(--color-coral);
-}
-
-.text-community-name {
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: var(--fs-community-name);
-}
-
-.text-community-text {
-  font-family: var(--font-main);
-  font-weight: 400;
-  font-size: var(--fs-community-text);
-}
-
-.text-gallery {
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: var(--fs-gallery-text);
-}
-/* Imagen */
-.hero-image {
-  grid-column: 8 / -2;   /* ocupa columnas 8 hasta la penúltima */
-  display: flex;
-  justify-content: right;  /* alinea la imagen a la derecha */
-}
-
-.hero-image img {
-  width: 49%;        /* 🔹 la imagen se ajusta al ancho de su área (col 8-14) */
-  height: auto;       /* mantiene proporción */
-  object-fit: cover;  /* recorta si es necesario sin deformar */
-}
 /* =========================
-   SPLIT LAYOUT - HERO SECTION
+   CONTENEDOR GENERAL (GRID 14 COLUMNAS)
    ========================= */
-
-/* Fuente base y estilo global */
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: var(--font-main);
   margin: 0;
-  background-color: #fafafa;
+  background-color: var(--color-background);
   color: #222;
 }
 
-/* Contenedor general basado en grid de 14 columnas */
 .container {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   column-gap: 20px;
   max-width: 1440px;
   margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 80px 20px;
-  align-items: center; /* Centra verticalmente los contenidos */
+  align-items: center;
 }
 
-/* --- HERO SECTION --- */
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
-  min-height: 80vh; /* altura visual grande */
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  align-items: center;
+  gap: 20px;
 }
 
-/* Texto a la izquierda */
 .hero-text {
-  grid-column: 1 / 7; /* Ocupa de columna 2 a 7 */
+  grid-column: 1 / 7;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  color: #ff7f50;
+  font-size: var(--fs-title);
+  color: var(--color-primary);
   margin-bottom: 20px;
   line-height: 1.3;
   text-align: center;
 }
 
 .hero-text p {
-  font-size: 1.rem;
+  font-size: var(--fs-text);
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 3vw;
   text-align: center;
 }
 
-/* Botones */
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -201,37 +149,36 @@ body {
 }
 
 .btn {
-  background-color: #fefefe;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
- 
+  transition: all var(--btn-transition);
+  border: none;
 }
 
 .btn:hover {
   background-color: #e46f43;
+  color: #fff;
 }
 
 .btn.secondary {
   background-color: transparent;
-  border: 2px solid #ff7f50; /* color de borde del boton HERO */
-  color: #000000;/* color de borde texto boton HERO */
+  border: 2px solid var(--color-primary);
+  color: #000;
+  text-decoration: none;
 }
 
 .btn.secondary:hover {
-  background-color: #ff895a;/* cambio de color de borde del boton HERO */
-  color: #fff;/* cambio de color de borde texto boton HERO */
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
-/* Imagen a la derecha */
+/* Hero image */
 .hero-image {
-  grid-column: 8 / 14; /* Ocupa columnas 8 a 14 */
+  grid-column: 8 / 14;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .hero-image img {
@@ -239,81 +186,84 @@ body {
   height: auto;
   object-fit: cover;
 }
-/* Estilo de la sección con color piel */
+
+/* =========================
+   SECCIÓN LOGO COLOR PIEL
+   ========================= */
+
 .seccion-logo {
-  background-color: #f5d6c6; /* color piel, puedes ajustarlo */
+  background-color: #f5d6c6; /* color piel suave */
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente */
-  padding: 50px 0px;         /* espacio arriba y abajo */
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  width: 100%;
+  min-height: 100vh; /* buena presencia visual */
+  overflow: hidden;
 }
 
-/* Logo dentro de la sección */
-.seccion-logo .logo img {
-  width: auto;  /* ajusta el tamaño según necesites */
-  height: 250px;
+/* Contenedor del logo */
+.seccion-logow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease;
+  width: 60%; /* ancho base relativo al contenedor */
+  max-width: 700px; /* límite superior */
 }
+
 
 /* =========================
    RETOS
    ========================= */
-   .retos .back { /* controla el espacio en donde se encuentra la navegación */
-  background-color: #ffbb54;
-  border-bottom: 1px solid #ffffff;
-  position: static;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: center; /* centra el contenido dentro de la barra */
-  align-items: center;
-}
 .retos {
-  /* Ocupa todo el ancho y aumenta la altura */
   grid-column: 1 / -1;
-  width: auto;
-  min-height: 100vh; /* ocupa casi toda la pantalla en alto */
-  
-  /* Espaciado interno para aire visual */
-  padding: 120px 40px; /* antes 100px 0 —> puedes ajustar este valor */
-  
+  min-height: 100vh;
+  padding: 120px 40px;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   gap: 30px;
+  background-color: var(--color-piel);
   align-items: start;
-  justify-content: center;
-
-  /* fondo color piel */
-  background-color: #FFE3AF; /* tu color piel */
-
 }
 
 .retos-titulo {
-  display: grid;
   grid-column: 1 / 4;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: var(--font-main);
   font-weight: 500;
   font-size: 44px;
-  color: #000000;
-  margin: 0 0 10px 0;
+  color: #000;
   margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 40px;
 }
 
-/* GRID DE LOS 3 RETOS */
 .retos-grid {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 }
 
-/* TARJETAS INDIVIDUALES */
+/* TARJETAS DE RETO */
 .reto-card {
-  background-color: #FFFCE6;
+  background-color: #FFFAD3;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   overflow: hidden;
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  /* 🔹 Altura adaptable según tamaño del dispositivo */
+  min-height: clamp(320px, 45vh, 500px);
+  width: 100%;
+
 }
 
 .reto-card:hover {
@@ -321,37 +271,14 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.reto-card {
-  height: 398px;
-  width: auto;
-  background-color: #FFFAD3;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start; /* texto debajo */
-
- /* --- CENTRADO TOTAL --- */
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* centra horizontalmente */
-  justify-content: center; /* centra verticalmente */
-  gap: 12px;               /* espacio entre imagen, h3 y p */
-}
-
 .reto-card img {
-  border-radius: 16px;
-  display: block;
-  max-width: 100%;
+  margin-top: 20px;
+  width: 80%;
   height: auto;
-  margin: 0 auto;
-  object-fit: contain; /* muestra la imagen completa sin recorte */
+  border-radius: 16px;
+  object-fit: contain;
+  margin-bottom: 5px;
 }
-
 
 .reto-card h3 {
   font-size: 24px;
@@ -361,39 +288,316 @@ body {
 
 .reto-card p {
   font-size: 16px;
-  color: #000000;
+  color: #000;
   padding: 0 20px 24px 20px;
   margin: 0;
 }
 
-/* reto Botones */
+/* Botón de ver todos los retos */
 .reto-buttons {
   display: flex;
-  gap: 15px;
   justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
 }
+
 .btnreto {
-  background-color: #c0a7a7;
-  color: #b91f1f;
-  border: none;
-  padding: 12px 24px;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--btn-transition);
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #060606;
+  margin-bottom: 20px;
+}
+
+.btnreto:hover {
+  background-color: #6119f1;
+  color: #fff;
+  border: transparent;
+}
+  /* =========================
+   SECCIÓN RETOSEGUNDO
+   ========================= */
+.retosegundoconta {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: left;
+  background-color: #f8f8f8;
+}
+
+.textsub-reto {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+/* =========================
+   BOTONES DE GALERÍA Y COMUNIDAD
+   ========================= */
+.text-btn, .text-btnn {
+  align-items: end;
+  padding: var(--btn-padding);
+  border-radius: var(--btn-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--btn-transition);
+  border: 2px solid #060606;
+  background-color: #FFFCE6;
+  color: #000000;
+  margin: 10px 20;
+}
+
+.text-btn:hover {
+  background-color: #7D56C0;
+  color: #fff;
+  border: transparent;
+}
+
+.text-btnn:hover {
+  background-color: #280c59;
+  color: #fff;
+  border: transparent;
+}
+/* =========================
+   TEXTOS
+   ========================= */
+.text-subtitle {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-subtitle);
+  margin: 24px 0px;
+  text-align: left;
+}
+
+.text-comunidad-texto {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========================= 
+   SECCIÓN DEL VIDEO
+   ========================= */
+.video-wrapper {
+  position: relative; /* para poder ajustar contenido si se necesita */
+  width: 99.5%; /* ancho relativo al viewport */
+  height: auto; /* altura relativa, puedes ajustar */
+  overflow: hidden; /* recorta cualquier exceso */
+  display: flex;
+  justify-content: flex-start; /* centra horizontalmente */
+  align-items: flex-start; /* centra verticalmente */
+  margin: 0 auto; /* centra el contenedor dentro de la sección */
+}
+
+/* VIDEO */
+.reto-video {
+  grid-column: 2 / -1; /* empieza en columna 2 y se extiende hasta el final */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el contenedor sin deformar */
+  object-position: 0ch;
+  display: block;
+}
+/* Contenedor general */
+.galeriacontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: transparent;
+}
+/* GALERIAIMAGENES */
+
+/* Título */
+.text-subtitle {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  margin-left: 50px;
+}
+
+/* Contenedor de los botones */
+.btn-container {
+  display: flex;
+  justify-content: center; /* puedes cambiar a: flex-start | flex-end | space-between */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Botones */
+.text-btn {
+  background-color: #FFFCE6;
+  color: #000;
+  border: 2px solid #060606;
   border-radius: 8px;
+  padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 30px;
- 
+  margin-bottom: 20px;
 }
 
-
-.btnreto {
-  background-color: transparent;/* cambio de color de borde del boton HERO */
-  color: #000000;/* cambio de color de borde texto boton HERO */
-  border: 2px solid #060606; /* color de borde del boton HERO */
-}
-.btnreto:hover {
-  background-color: #6119f1;/* cambio de color de borde del boton HERO */
-  color: #fff;/* cambio de color de borde texto boton HERO */
+/* Efecto hover */
+.text-btn:hover {
+  background-color: #7D56C0;
+  color: #ffffff;
   border: transparent;
+  transform: translateY(-3px)
 }
+
+  /* =========================
+   BOTON SUBIR
+   ========================= */
+.subir {
+  display: flex;
+  justify-content: flex-end; /* puedes cambiar a: flex-start | flex-end | space-between */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 50px;
+}
+
+/* SUBIR BOTON*/
+.subir-btn {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.subir-btn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: transparent;
+  transform: translateY(-1px)
+}
+
+/* Contenedor de los cuadros split */
+.cuadro-split {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap; /* Para que sea responsivo en móviles */
+}
+
+/* Cada cuadro */
+.cuadro {
+  background-color: #f8e7d1; /* color piel de cada cuadro */
+  flex: 1 1 300px; /* ancho mínimo de 300px, flexible */
+  max-width: 400px; /* tamaño máximo */
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+  /* =========================
+   SECCIÓN COMUNIDAD
+   ========================= */
+.containercomunidad {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: left;
+  background-color: #f8f8f8;
+}
+
+.text-subtitlepp {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 30px;
+  margin-left: 2px;
+  margin-top: 10px;
+  margin-left: 45px;
+}
+
+/* Clase específica para imágenes escalables */
+.img-escalable {
+  transition: transform 0.3s ease; /* suaviza el cambio de escala */
+  display: block; /* evita que afecte el layout */
+  max-width: 100%; /* mantiene dentro del contenedor */
+  border-radius: 8px;
+}
+
+/* Escala por defecto */
+.img-escalable {
+  transform: scale(0.8); /* 1 = tamaño normal */
+}
+
+/* Escala al pasar el mouse (opcional) */
+.img-escalable:hover {
+  transform: scale(1); /* aumenta un 5% */
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background-color: #971cef;
+  padding: 40px 0;
+  color: #d2d2d2;
+  grid-column: 1 / 15;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* permite que los enlaces bajen en pantallas pequeñas */
+  justify-content: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+/* Hover para editar libremente color o efecto */
+.footer-links a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
 

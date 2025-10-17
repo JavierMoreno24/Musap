@@ -1,0 +1,66 @@
+/* ============================
+   TU CSS ORIGINAL
+   ============================ */
+
+/* --- Desktop (pantallas grandes) --- */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+}
+
+/* --- Tablet --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+  h1 { font-size: 2rem; }
+}
+
+/* --- Teléfono --- */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+  }
+  h1 { font-size: 1.5rem; text-align: center; }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ============================
+   SISTEMA DE ESCALADO FIJO
+   ============================ */
+
+.responsive-wrapper {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.scale-container {
+  width: 1440px; /* ancho base de tu diseño de escritorio */
+  transform-origin: top center;
+  transition: transform 0.3s ease;
+}
+
+/* Escala automática en pantallas menores */
+@media screen and (max-width: 1440px) {
+  .scale-container {
+    transform: scale(calc(100vw / 1440));
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .scale-container {
+    transform: scale(1);
+  }
+}
+

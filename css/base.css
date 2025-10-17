@@ -1,0 +1,23 @@
+/* ==========================
+   BASE TYPOGRAPHY & COLORS
+   ========================== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+:root {
+  /* Fuentes */
+  --font-main: 'Nunito Sans', sans-serif;
+
+  /* Colores */
+  --color-text: #000000;
+  --color-coral: #FF7F50;
+   --color-PIEL: #FFE3AF;
+ --color-PIELCLARO : #FFFCE6;
+  --color-MORADO: #7D56C0;
+  /* Tamaños base (desktop) */
+  --fs-btn: 30px;
+  --fs-subtitle: 44px;
+  --fs-title: 60px;
+  --fs-community-name: 32px;
+  --fs-community-text: 28px;
+  --fs-gallery-text: 20px;
+}
