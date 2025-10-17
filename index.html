@@ -35,9 +35,8 @@
 </nav>
   <!-- LOGO -->
 <section class="seccion-logo">
-  <div class="logo">
+  <div class="seccion-logow">
     <img src="imagenes/logo bueno.png" alt="logo"/>
-    <script src="script.js"></script>
   </div>
 </section>
 
@@ -66,7 +65,7 @@
 
       <div class="hero-buttons">
         <button class="btn secondary">Explorar</button>
-        <button class="btn secondary">Participar en retos</button>
+        <a href="#retos" class="btn secondary">Participar en retos</a>
       </div>
     </div>
 
@@ -86,7 +85,7 @@
 <section id="retos" class="retos container">
   
   <!-- Título -->
-  <div class="retos-text" style="grid-column: 2 / 8;">
+  <div class="retos-text" style="grid-column: 1 / 8;">
     <h2 class="retos-titulo">Retos recomendados</h2>
   </div>
 
@@ -97,7 +96,7 @@
     <div class="reto-card">
       <img src="imagenes/retos/reto azul w.png" alt="Reto 1">
       <h3>Reto color del mes</h3>
-      <p>Crea una obra usando solo tonos azules.</p>
+      <p>Usa solo tonos azules.</p>
     </div>
 
     <!-- Reto 2 -->
@@ -119,33 +118,97 @@
 </section>
 
 <!-- Sección RETOS POPULARES DE LA SEMANA -->
-<section class="container">
-  <h2 class="text-subtitle">Retos populares de la semana</h2>
-  <!-- Aquí puedes agregar el contenido relacionado -->
+<section>
+  <div class="retosegundo" style="retosegundoconta">
+    <h2 class="textsub-reto">Retos populares de la semana</h2>
+  </div>
 
-
-
-<!-- Sección GALERIA DE OBRAS -->
-<section id="galeria" class="container">
-  <h2 class="text-subtitle">Galería de obras</h2>
-  <!-- Aquí puedes agregar el contenido relacionado -->
+  <!-- ANIMACIÓN -->
+  <div class="reto-video">
+    <video class="video-wrapper" autoplay muted loop playsinline>
+      <source src="videos/datos animacion (clip unido).mp4" type="video/mp4">
+    </video>
+  </div>
 </section>
 
-<section>
-  <button class="text-btn">Técnicas</button>
-  <button class="text-btn">Estilo</button>
-  <button class="text-btn">Popularidad</button>
-  <button class="text-btn">Más recientes</button>
-<section>
- <!-- Sección 4 -->
-<section class="container">
-  <h2 class="text-subtitle">Comunidad</h2>
-  <!-- Aquí puedes agregar el contenido relacionado -->
-<section>
+<!-- GALERIA -->
 
-<section>
-  <button class="text-btnn">Unirse a la comunidad</button>
-<section>
+<section id="galeria" class="galeriacontainer">
+  <!-- Título de la galería -->
+  <h2 class="text-subtitle">Galería de obras</h2>
 
-<p class="text-comunidad-texto">Diseños creados por la comunidad</p>
+  <!-- Botones de filtro -->
+  <div class="btn-container">
+    <button class="text-btn">Técnicas</button>
+    <button class="text-btn">Estilo</button>
+    <button class="text-btn">Popularidad</button>
+    <button class="text-btn">Más recientes</button>
+  </div>
 
+  <!-- Galería de imágenes -->
+  <div class="galeria-imagenes">
+    <div class="grid-galeria">
+      <img src="imagenes/galeria/1w.png" alt="Obra 1" class="galeria-img">
+      <img src="imagenes/galeria/2w.png" alt="Obra 2" class="galeria-img">
+      <img src="imagenes/galeria/3w.png" alt="Obra 3" class="galeria-img">
+      <img src="imagenes/galeria/4w.png" alt="Obra 4" class="galeria-img">
+      <img src="imagenes/galeria/5w.png" alt="Obra 5" class="galeria-img">
+      <img src="imagenes/galeria/6w.png" alt="Obra 6" class="galeria-img">
+      <img src="imagenes/galeria/7w.png" alt="Obra 7" class="galeria-img">
+      <img src="imagenes/galeria/8w.png" alt="Obra 8" class="galeria-img">
+      <img src="imagenes/galeria/9w.png" alt="Obra 9" class="galeria-img">
+      <img src="imagenes/galeria/10w.png" alt="Obra 10" class="galeria-img">
+      <img src="imagenes/galeria/11w.png" alt="Obra 11" class="galeria-img">
+      <img src="imagenes/galeria/12w.png" alt="Obra 12" class="galeria-img">
+    </div>
+  </div>
+
+  <!-- Botón para subir obra -->
+  <div class="subir">
+    <button class="subir-btn">Subir obra</button>
+  </div>
+</section>
+
+
+<!-- SECCIÓN 4: COMUNIDAD -->
+<section id="comunidad" class="containercomunidad">
+  <h2 class="text-subtitlepp">Comunidad</h2>
+
+  <!-- Contenedor cuadros split -->
+  <div class="cuadro-split">
+    <div class="cuadro">
+      <img src="imagenes/comunidad/chicaw.png" alt="ana gomez" class="img-escalable">
+      <h3>Ana Gómez</h3>
+      <p>Sueños en acuarela.</p>
+    </div>
+    <div class="cuadro">
+      <img src="imagenes/comunidad/chicow.png" alt="carlos rivera" class="img-escalable">
+      <h3>Carlos Rivera</h3>
+      <p>Me encanta el contraste de colores.</p>
+    </div>
+  </div>
+
+  <!-- Botón general -->
+  <div class="subir">
+    <button class="subir-btn">Unirse a la comunidad</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <ul class="footer-links">
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#terminos">Términos y condiciones</a></li>
+      <li><a href="#privacidad">Política de privacidad</a></li>
+      <li><a href="#envios">Política de envíos</a></li>
+      <li><a href="#acerca">Acerca de MusApp</a></li>
+      <li><a href="#etico">Trabajo ético</a></li>
+      <li><a href="#avisos">Avisos legales</a></li>
+    </ul>
+
+    <div class="footer-copy">
+      <p>&copy; 2025 MusApp. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
