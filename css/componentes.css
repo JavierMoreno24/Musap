@@ -311,6 +311,7 @@ body {
   color: #000;
   border: 2px solid #060606;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 
 .btnreto:hover {
@@ -350,11 +351,11 @@ body {
   border: 2px solid #060606;
   background-color: #FFFCE6;
   color: #000000;
-  margin: 10px 20;
+  margin: 10px;
 }
 
 .text-btn:hover {
-  background-color: #7D56C0;
+  background-color: #4f12b8;
   color: #fff;
   border: transparent;
 }
@@ -364,6 +365,9 @@ body {
   color: #fff;
   border: transparent;
 }
+
+
+
 /* =========================
    TEXTOS
    ========================= */
@@ -435,7 +439,7 @@ body {
   gap: 1rem;
 }
 
-/* Botones */
+/* Botones de galeria */
 .text-btn {
   background-color: #FFFCE6;
   color: #000;
@@ -445,6 +449,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 5px;
   margin-bottom: 20px;
 }
 
@@ -453,7 +458,54 @@ body {
   background-color: #7D56C0;
   color: #ffffff;
   border: transparent;
-  transform: translateY(-3px)
+  transform: translateY(-3px);
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 0px;
+}
+
+/* Contenido del dropdown */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* Justo debajo del botón */
+  left: 0;
+  background-color: #ff9c63;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Enlaces del dropdown */
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #09c6ff;
+  color: #000;
+}
+
+/* Mostrar dropdown al hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
   /* =========================
