@@ -551,6 +551,31 @@ body {
 .img-escalable:hover {
   transform: scale(1); /* aumenta un 5% */
 }
+/* ========================= 
+   SECCIÓN DEL VIDEO N2
+   ========================= */
+.videoMusapp {
+  position: relative; /* para poder ajustar contenido si se necesita */
+  width: 70%; /* ancho relativo al viewport */
+  height: auto; /* altura relativa, puedes ajustar */
+  overflow: hidden; /* recorta cualquier exceso */
+  display: flex;
+  justify-content: flex-start; /* centra horizontalmente */
+  align-items: flex-start; /* centra verticalmente */
+  margin: 0 auto; /* centra el contenedor dentro de la sección */
+  margin-bottom: 80px;
+  border-radius: 20px;
+}
+
+/* VIDEO */
+.videonly {
+  grid-column: 2 / -1; /* empieza en columna 2 y se extiende hasta el final */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* llena el contenedor sin deformar */
+  object-position: 0ch;
+  display: block;
+}
 
 /* =========================
    FOOTER
@@ -599,5 +624,4 @@ body {
   font-size: 0.9rem;
   opacity: 0.9;
 }
-
 
