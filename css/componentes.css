@@ -443,7 +443,7 @@ body {
 .text-btn {
   background-color: #FFFCE6;
   color: #000;
-  border: 2px solid #060606;
+  border: 0.5px solid #060606;
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 1rem;
@@ -473,7 +473,7 @@ body {
   position: absolute;
   top: 100%; /* Justo debajo del botón */
   left: 0;
-  background-color: #ff9c63;
+  background-color: #ffffff;
   border-radius: 8px;
   min-width: 180px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
@@ -487,18 +487,28 @@ body {
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
-
+.dropdown-content:before {
+  content: none ;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  position: absolute;
+  top: -12px; 
+  left: 20px;
+}  
 /* Enlaces del dropdown */
 .dropdown-content a {
-  color: #fff;
+  color: #5812c9;
   padding: 10px 15px;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #09c6ff;
-  color: #000;
+  background-color: #f7a211;
+  color: #ffffff;
 }
 
 /* Mostrar dropdown al hover */
@@ -666,7 +676,7 @@ body {
 /* Hover para editar libremente color o efecto */
 .footer-links a:hover {
   color: var(--color-primary);
-  text-decoration: underline;
+  text-decoration: none;
   transform: scale(1.05);
 }
 
